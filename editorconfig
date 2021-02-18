@@ -1,0 +1,35 @@
+# This file should be the same at the one it root folder
+# It is used by the CREX package when running locally
+root = true
+
+[*]
+insert_final_newline = true
+end_of_line = lf
+charset = utf-8
+
+[*.{js, json, jsx, scss, css}]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
+[*.{xml,html}]
+indent_style = space
+indent_size = 4
+
+[*.{kt,java,jsp,jspf}]
+indent_style = space
+indent_size = 4
+
+"editor.formatOnPaste": true,
+"editor.formatOnSave": true,
+"[javascript]": {
+  "editor.formatOnSave": true,
+},
+"[html]": {
+  "editor.formatOnSave": false,
+},
+"[json]": {
+  "editor.formatOnSave": false,
+},
+"eslint.autoFixOnSave": true,
+"eslint.alwaysShowStatus": true,
