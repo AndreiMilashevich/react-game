@@ -1,0 +1,27 @@
+.logo {
+  width: 90px;
+  height: 30px;
+  background-image: url('../../assets/images/rs-school-logo/rs_school_js.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-position: center;
+  margin-right: 50px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 20px;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 1.4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3CD861;
+}
+
+// .footer__logo_wrapper {
+//   di
+// }

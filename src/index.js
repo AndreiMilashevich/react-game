@@ -1,8 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './Components/App/App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap-grid.min.css';
+
+const score = [
+  {user: 'Alex', score: '370'},
+  {user: 'Max', score: '160'},
+  {user: 'Dima', score: '888'},
+  {user: 'Vadim', score: '14'},
+  {user: 'Alex', score: '2222'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+  {user: 'Alex', score: '23'},
+]
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,7 +41,6 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+export { score };

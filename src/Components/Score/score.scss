@@ -1,0 +1,48 @@
+.score {
+  &_block {
+    position: fixed;
+		height: 80vh;
+		top: 10vh;
+		border: 2px solid rgba(26, 238, 25, 0.5);
+		background-color: #121012;
+		z-index: 100;
+		margin: 0 auto;
+		left: 10vw;
+		width: 80vw;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 24px;
+      background-color: rgba(26, 238, 25, 0.1);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(26, 238, 25, 0.5);
+    }
+
+  }
+
+  &_item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px dotted rgba(26, 238, 25, 0.5);
+    margin: 10px;
+  }
+}
+
+// body::-webkit-scrollbar {
+//   width: 12px;               /* ширина scrollbar */
+// }
+// body::-webkit-scrollbar-track {
+//   background: orange;        /* цвет дорожки */
+// }
+// body::-webkit-scrollbar-thumb {
+//   background-color: blue;    /* цвет плашки */
+//   border-radius: 20px;       /* закругления плашки */
+//   border: 3px solid orange;  /* padding вокруг плашки */
+// }
+
+// ::-webkit-scrollbar {
+//   width: 24px; /* ширина для вертикального скролла */
+//   height: 8px; /* высота для горизонтального скролла */
+//   background-color: #143861;
