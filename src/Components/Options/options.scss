@@ -10,4 +10,97 @@
 		left: 10vw;
 		width: 80vw;
 	}
+
+	&_name {
+		outline: none;
+		border-radius: 0;
+		border: 2px solid rgba(26, 238, 25, 0.5);
+		background-color: rgba(26, 238, 25, 0.1);
+		width: 80%;
+		height: 40px;
+		box-sizing: border-box;
+		caret-color: rgba(26, 238, 25, 0.5);
+		color: rgba(26, 238, 25, 0.5);
+		font-size: 2rem;
+		font-weight: bold;
+		font-family: "Press Start 2P", cursive;
+		padding: 0 10px;
+	}
 }
+
+input[type="range"] {
+	-webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+	background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+	outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type="range"]::-ms-track {
+	width: 100%;
+	cursor: pointer;
+
+	/* Hides the slider so custom styles can be added */
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 36px;
+	width: 16px;
+	background: #167f16;
+	cursor: pointer;
+	margin-top: -14px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+	width: 200px;
+	height: 8px;
+	cursor: pointer;
+	background: rgba(26, 238, 25, 0.2);
+}
+
+input[type="range"]::-moz-range-track {
+	background-color: white;
+	width: 200px;
+}
+
+.retro-checkbox {
+	display: none;
+}
+
+.fake-checkbox {
+	margin: 0;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #167f16;
+	position: relative;
+
+	&_point {
+		position: absolute;
+		display: block;
+		width: 16px;
+		height: 16px;
+		background-color: #167f16;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 1;
+		transition: all 0.2s;
+	}
+}
+
+label,
+input {
+	cursor: pointer;
+}
+
+

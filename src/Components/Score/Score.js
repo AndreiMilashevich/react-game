@@ -9,7 +9,6 @@ class Score extends React.Component {
 
 	scoreClickHandler = () => {
 		this.setState({ isOpen: !this.state.isOpen });
-		console.log("click");
 	}
 
 	render() {
