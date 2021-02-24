@@ -4,28 +4,40 @@ import "./options.scss";
 class Options extends React.Component {
 	state = {
 		isOpen: false,
-    isChecked: true,
+		isChecked: true,
 	};
 
 	render() {
 		return this.state.isOpen ? (
 			<div className="options_block">
-				<p className="close_button" onClick={() => {this.setState({ isOpen: !this.state.isOpen })}}>
+				<p
+					className="close_button"
+					onClick={() => {
+						this.setState({ isOpen: !this.state.isOpen });
+					}}
+				>
 					X
 				</p>
 				<h2>Options</h2>
 				<div>
 					<label>
 						<p>Name</p>
-						<input type="text" className="options_name"/>
+						<input type="text" className="options_name" />
 					</label>
-					<label onChange={() => {this.setState({ isChecked: !this.state.isChecked })}}>
+					<label
+						onChange={() => {
+							this.setState({ isChecked: !this.state.isChecked });
+						}}
+					>
 						<p>Retro mode</p>
-            <div className="fake-checkbox">
-              { this.state.isChecked ? <div className="fake-checkbox_point"></div> : ''}
-              
-            </div>
-						<input type="checkbox" className="retro-checkbox"/>
+						<div className="fake-checkbox">
+							{this.state.isChecked ? (
+								<div className="fake-checkbox_point"></div>
+							) : (
+								""
+							)}
+						</div>
+						<input type="checkbox" className="retro-checkbox" />
 					</label>
 					<label>
 						<p>Sound</p>
@@ -38,7 +50,12 @@ class Options extends React.Component {
 				</div>
 			</div>
 		) : (
-			<div className="startPage__item" onClick={() => {this.setState({ isOpen: !this.state.isOpen })}}>
+			<div
+				className="startPage__item"
+				onClick={() => {
+					this.setState({ isOpen: !this.state.isOpen });
+				}}
+			>
 				Options
 			</div>
 		);

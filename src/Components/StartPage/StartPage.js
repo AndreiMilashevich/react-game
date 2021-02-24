@@ -6,7 +6,7 @@ import Options from '../Options/Options';
 
 const StartPage = () => {
 	return (
-		<div className="startPage__block container-lg d-flex flex-column justify-center">
+		<div className="startPage__block d-flex flex-column justify-center p0 m0">
 			<div>
 				<h1>
 					<p>space</p> <p>invaders</p>
