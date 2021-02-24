@@ -12,7 +12,7 @@ const StartPage = () => {
 					<p>space</p> <p>invaders</p>
 				</h1>
 			</div>
-				<div className="startPage__item bg-alert">Start</div>
+				<div className="startPage__item">Start</div>
 				<Score />
 				<Options />
       <Footer />

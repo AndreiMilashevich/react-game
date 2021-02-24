@@ -1,6 +1,39 @@
-.gameField {
+
+.gamePage {
   position: relative;
-  background-color: red;
-  height: 100px;
+  height: 100vh;
   color: white;
+
+  &_gameField {
+    position: relative;
+    height: 90vh;
+    max-width: 1024px;
+    width: 100%;
+    background-color: yellowgreen;
+    margin: 0 auto;
+  }
+
+  &_user_track {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 100px;
+  }
+
+  &_user_ship {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    left: calc(50% - 50px);
+  }
+
+  &_header {
+    height: 10vh;
+    font-size: 1.6rem;
+
+    &_item {
+      padding: 0 20px;
+    }
+  }
 }

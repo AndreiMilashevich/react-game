@@ -6,8 +6,8 @@ import "./app.scss";
 function App() {
 	return (
   <div className="background">
-    {/* <GamePage /> */}
-    <StartPage />
+    <GamePage />
+    {/* <StartPage /> */}
   </div>
   )
 }

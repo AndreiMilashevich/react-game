@@ -1,15 +1,41 @@
-import './gamePage.scss';
-import React from 'react';
+import './gamePage.scss'
+import React from 'react'
 
 class GamePage extends React.Component {
+  state = {
+    shipPosition: 0,
+  }
 
-    render() {
-      return (
-        <div className="gameField container-lg">Hello</div>
-      )
+  componentDidMount() {
+    window.addEventListener('keydown', this.moveShip)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown',this.moveShip)
+  }
+
+  moveShip = (event) => {
+    if (event.key === 'ArrowLeft' ) {
+      console.log('click')
     }
+  }
+
+  render() {
+    return (
+      <div className="gamePage">
+        <header className="gamePage_header d-flex align-items-center justify-content-between">
+          <div className="gamePage_header_item">Score: 250</div>
+          <div className="gamePage_header_item">Stage: 1</div>
+          <div className="gamePage_header_item">Lives: </div>
+        </header>
+        <main className="gamePage_gameField">
+          <div className="gamePage_user_track">
+            <div className="gamePage_user_ship" ></div>
+          </div>
+        </main>
+      </div>
+    )
+  }
 }
 
-export default GamePage;
-
-
+export default GamePage
