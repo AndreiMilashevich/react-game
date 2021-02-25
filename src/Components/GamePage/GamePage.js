@@ -3,7 +3,7 @@ import React from 'react'
 
 class GamePage extends React.Component {
   state = {
-    shipPosition: 0,
+    shipPosition: 1,
   }
 
   componentDidMount() {
@@ -16,7 +16,7 @@ class GamePage extends React.Component {
 
   moveShip = (event) => {
     if (event.key === 'ArrowLeft' ) {
-      console.log('click')
+      this.setState({shipPosition: this.state.shipPosition + 10});
     }
   }
 
