@@ -9,22 +9,23 @@
     height: 90vh;
     max-width: 1024px;
     width: 100%;
-    background-color: yellowgreen;
     margin: 0 auto;
   }
 
   &_user_track {
-    position: relative;
-    background-color: white;
+    position: absolute;
     width: 100%;
     height: 100px;
+    bottom: 0;
   }
 
   &_user_ship {
     width: 100px;
-    height: 100px;
-    background-color: red;
+    height: 80px;
+    background-image: url('../../assets/images/damage/playerShip1_damage3.png'), url('../../assets/images/damage/playerShip1_damage2.png'), url('../../assets/images/damage/playerShip1_damage1.png'), url('../../assets/images/player-ships/playerShip1_green.png');
+    background-size: contain;
     position: absolute;
+    background-repeat: no-repeat;
     left: calc(50% - 50px);
   }
 
@@ -35,5 +36,17 @@
     &_item {
       padding: 0 20px;
     }
+  }
+}
+
+.move {
+  // transition: all 0.2s;
+
+  &_left {
+    transform: rotate(-5deg) scaleX(0.75);
+  }
+
+  &_right {
+    transform: rotate(5deg) scaleX(0.75);
   }
 }
