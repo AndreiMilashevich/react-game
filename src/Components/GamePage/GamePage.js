@@ -27,7 +27,8 @@ class GamePage extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('keypress', this.moveShip);
+    window.removeEventListener('keydown', this.moveShip);
+    window.addEventListener('keyup', this.keyUpHandler);
   }
 
   moveShip = (event) => {

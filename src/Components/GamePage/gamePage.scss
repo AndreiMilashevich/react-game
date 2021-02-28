@@ -40,13 +40,13 @@
 }
 
 .move {
-  // transition: all 0.2s;
-
   &_left {
+    transition: all 0.2s;
     transform: rotate(-5deg) scaleX(0.75);
   }
 
   &_right {
+    transition: all 0.2s;
     transform: rotate(5deg) scaleX(0.75);
   }
 }
