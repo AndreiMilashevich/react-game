@@ -1,33 +1,22 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Press Start 2P', cursive;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   position: relative;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 html {
   font-size: 10px;
-  
 }
 
 a {
-  color: rgba(26,238,25, 0.5);
+  color: black;
   text-decoration: none;
 
   &:hover {
-   color: #F4CF00;
+    color: #f4cf00;
   }
 
   &:visited {
-   color: rgba(26,238,25, 0.5);
+    color: black;
   }
 }
-
-

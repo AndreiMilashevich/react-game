@@ -9,7 +9,7 @@ const Footer = () => {
         </a>
       </div>
       <div>
-        <a href="https://github.com/AndreiMilashevich/react-game/tree/react-game">Andrei Milashevich 2020</a>
+        <a href="https://github.com/AndreiMilashevich/react-game/tree/react-game">© Andrei Milashevich 2020</a>
         </div>
     </footer>
   )
