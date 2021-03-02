@@ -8,12 +8,18 @@ class Hole extends React.Component {
     this.holeRef = React.createRef()
   }
 
+//избавиться от рефов. className={`mole${isMoleUp && !isMoleBang ? ' is-mole-up' : ''}`} 
+// isMoleUp = activeIndex === moleIndex
+// onClick = this.props.onClickHandler
+// попробовать создать отдельный метод на click который будет сетать флаг в стейте isBang. Этот флаг  должен убирать класс is-Mole-Up and isMoleBang
+// попробовать по setTimeout сетать false
+
   render() {
     return (
-      <div className="hole" ref={this.holeRef}>
+      <div className="hole" ref={this.holeRef} id={this.props.id} holeNumber={this.props.holeNumber}>
         <div
           ref={this.moleRef}
-          className={this.props.isMoleUp ? 'mole mole_up' : 'mole'}
+          className={this.props.id === this.props.holeNumber ? 'mole mole_up' : 'mole'}
           onClick={() => {
             this.props.moleClickHandler()
             this.className = 'mole'
