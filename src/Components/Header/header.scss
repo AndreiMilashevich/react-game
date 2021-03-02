@@ -1,0 +1,22 @@
+header {
+  padding-top: 50px;
+  width: 100%;
+  font-size: 7rem;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+}
+
+.button {
+  &_start {
+    width: 100px;
+    height: 50px;
+    font-size: 2rem;
+    border-radius: 0;
+    border: 2px solid black;
+  }
+
+  &_fullscreen {
+    display: block;
+  }
+}
