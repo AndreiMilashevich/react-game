@@ -50,12 +50,12 @@ const Header = ({
         </div>
         <p>Music</p>
         <label>
-          <input type="range" id="music_range" min="0" max="1"  step="0.05" value={musicValue} onChange={() => {rangeHandler(music)}}/>
+          <input type="range" id="music_range" min="0" max="1"  step="0.05" onChange={() => {rangeHandler(music)}}/>
           {/* <input type="checkbox" /> */}
         </label>
         <p>Sound</p>
         <label>
-          <input type="range" id="sound_range" min="0" max="1" step="0.05" value={soundValue} onChange={() => {rangeHandler(sound)}}/>
+          <input type="range" id="sound_range" min="0" max="1" step="0.05"  onChange={() => {rangeHandler(sound)}}/>
           {/* <input type="checkbox" /> */}
         </label>
       </div>
