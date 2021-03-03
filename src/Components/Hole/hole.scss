@@ -1,7 +1,6 @@
 .hole {
   width: 150px;
   height: 150px;
-  // margin: 10px;
   position: relative;
   overflow: hidden;
 
@@ -24,11 +23,13 @@
     background-size: 50% 50%;
     background-repeat: no-repeat;
     background-position: center center;
+    z-index: 3;
 
     &_large {
       background-size: 75% 75%;
       background-position: center 50%;
       transition: 0.01s;
+      z-index: 3;
     }
   }
 }
