@@ -1,12 +1,26 @@
 import './header.scss'
 import { useState } from 'react'
 
-const Header = ({ score, startGame, inGame, gameOver, statiscicsClose, molesCount, scoreList, userNameChangeHandler, userName }) => {
+const Header = ({
+  score,
+  startGame,
+  inGame,
+  gameOver,
+  statiscicsClose,
+  molesCount,
+  scoreList,
+  userNameChangeHandler,
+  userName,
+  rangeHandler,
+  soundValue,
+  musicValue,
+}) => {
   const [isOptionsOpen, closeOptions] = useState(false)
   const [isScoreOpen, closeScore] = useState(false)
   const scoreMultiplier = 10
   const percents = 100
-  
+  const music = document.querySelector('#music_range')
+  const sound = document.querySelector('#sound_range')
 
   const accuracy = Math.round((score / scoreMultiplier / molesCount) * percents)
 
@@ -18,10 +32,6 @@ const Header = ({ score, startGame, inGame, gameOver, statiscicsClose, molesCoun
     }
   }
 
-  const changeHandler = (event) => {
-    localStorage.setItem('user', event.target.value)
-  } 
-
   return (
     <header>
       <div className={isOptionsOpen ? 'page' : 'page_hidden page'}>
@@ -31,7 +41,7 @@ const Header = ({ score, startGame, inGame, gameOver, statiscicsClose, molesCoun
         Options
         <label>
           <p>Name:</p>
-          <input type="text" className="options_name" value={userName} onChange={changeHandler}/>
+          <input type="text" className="options_name" name="user-name" value={userName} onChange={() => {userNameChangeHandler()}}/>
         </label>
         <div>
           <button className="button button_options" onClick={toggleFullscreen}>
@@ -40,13 +50,13 @@ const Header = ({ score, startGame, inGame, gameOver, statiscicsClose, molesCoun
         </div>
         <p>Music</p>
         <label>
-          <input type="range" />
-          <input type="checkbox" />
+          <input type="range" id="music_range" min="0" max="1"  step="0.05" value={musicValue} onChange={() => {rangeHandler(music)}}/>
+          {/* <input type="checkbox" /> */}
         </label>
         <p>Sound</p>
         <label>
-          <input type="range" />
-          <input type="checkbox" />
+          <input type="range" id="sound_range" min="0" max="1" step="0.05" value={soundValue} onChange={() => {rangeHandler(sound)}}/>
+          {/* <input type="checkbox" /> */}
         </label>
       </div>
       <div className={isScoreOpen ? 'page' : 'page_hidden page'}>
@@ -54,15 +64,13 @@ const Header = ({ score, startGame, inGame, gameOver, statiscicsClose, molesCoun
           X
         </div>
         Score
-        {
-          scoreList.map((item) => {
-            return (
-              <div className="score_item">
-                {item.user}: {item.score} points
-              </div>
-            )
-          })
-        }
+        {scoreList.map((item, index) => {
+          return (
+            <div className="score_item" key={index}>
+              {item.user}: {item.score} points
+            </div>
+          )
+        })}
       </div>
       <div className={gameOver ? 'page' : 'page_hidden page'}>
         <div className="page_close_button" onClick={() => statiscicsClose()}>

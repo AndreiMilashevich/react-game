@@ -24,9 +24,16 @@ class Game extends React.Component {
     scoreList: JSON.parse(localStorage.getItem('score')) || [],
     gameOver: false,
     molesCount: 0,
+    soundValue: localStorage.getItem('soundValue') || 0.5,
+    musicValue: localStorage.getItem('musicValue') || 1,
   }
 
   gameStatistics = JSON.parse(localStorage.getItem('score')) || []
+
+  componentDidMount() {
+    bangSound.volume = this.state.soundValue;
+    backgroundMusic.volume = this.state.musicValue;
+  }
 
   statiscicsClose = () => {
     this.setState({
@@ -34,10 +41,24 @@ class Game extends React.Component {
     })
   }
 
-  // userNameChangeHandler = (event, data) => {
-  //   const {value} = data
-  //   // this.setState({value: event.target.value})
-  // }
+  rangeHandler = (target) => {
+    if (target.id === 'music_range') {
+      backgroundMusic.volume = target.value;
+      localStorage.setItem('musicValue', target.value)
+    } else {
+      bangSound.volume = target.value;
+      localStorage.setItem('soundValue', target.value)
+    }
+  }
+
+  userNameChangeHandler = (event, data) => {
+    const input = document.querySelector(".options_name")
+    this.setState({
+      userName: input.value
+    })
+    localStorage.setItem('user', input.value)
+    
+  }
 
   random = (max, min) => {
     return Math.round(Math.random() * (max - min) + min)
@@ -109,10 +130,13 @@ class Game extends React.Component {
   }
 
   render() {
-    const { score, isMoleUp, inGame, randomHole, gameOver, molesCount, scoreList, userName } = this.state
+    const { score, isMoleUp, inGame, randomHole, gameOver, molesCount, scoreList, userName, soundValue, musicValue } = this.state
     return (
       <div className="wrapper background">
         <Header
+          soundValue={soundValue}
+          musicValue={musicValue}
+          rangeHandler={this.rangeHandler}
           userName={userName}
           userNameChangeHandler={this.userNameChangeHandler}
           scoreList={scoreList}
