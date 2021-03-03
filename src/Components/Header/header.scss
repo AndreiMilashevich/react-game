@@ -8,15 +8,57 @@ header {
 }
 
 .button {
+  border-radius: 0;
+  border: 1px solid black;
+  cursor: pointer;
+
+  &_options {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    min-width: 70px;
+  }
+
   &_start {
+    font-size: 2rem;
     width: 100px;
     height: 50px;
-    font-size: 2rem;
-    border-radius: 0;
-    border: 2px solid black;
   }
 
   &_fullscreen {
     display: block;
   }
+}
+
+.page {
+  font-size: 3rem;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  width: 480px;
+  transform: translateX(-50%);
+  min-height: 60vh;
+  background-color:#ADDFAD;
+  z-index: 4;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: all 0.2s;
+
+  &_hidden {
+    transition: all 0.4s;
+    top: -100%;
+  }
+
+  &_close_button {
+    font-family: 'Luckiest Guy', cursive;
+    cursor: pointer;
+    text-align: right;
+    position: absolute;
+    right: 10px;
+  }
+}
+
+.page p {
+  font-size: 2rem;
+  margin-bottom: 0;
+  overflow: auto;
 }
