@@ -1,0 +1,25 @@
+.logo {
+  width: 90px;
+  height: 30px;
+  background-image: url('../../assets/images/rs-school-logo/rs_school_js.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 50px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: 20px 0;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 1.4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+
+  @media screen and (max-height: 750px) {
+    position: relative;
+  }
+}

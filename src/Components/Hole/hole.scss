@@ -1,0 +1,56 @@
+.hole {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    display: block;
+    background-image: url('../../assets/images/hole/dirt.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 112%;
+    content: '';
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    z-index: 2;
+    bottom: -10px;
+  }
+
+  &_bang {
+    background-image: url('../../assets/images/PikPng.com_comic-bang-png_4081577.png');
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 3;
+
+    &_large {
+      background-size: 75% 75%;
+      background-position: center 50%;
+      transition: 0.01s;
+      z-index: 3;
+    }
+  }
+}
+
+.mole {
+  width: 75px;
+  height: 100px;
+  position: absolute;
+  top: 100%;
+  background-image: url('../../assets/images/mole/mole.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.2s;
+  background-position: center;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+
+  &_up {
+    transform: translate(-50%, -100%);
+    transition: all 0.2s;
+  }
+}
